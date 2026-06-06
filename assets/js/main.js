@@ -1,16 +1,14 @@
 (function () {
     'use strict';
 
-    /* Config - update CALENDLY_URL before going live */
-    var CALENDLY_URL = process.env.CALENDLY_URL;
+    var CALENDLY_URL = 'https://calendly.com/your-account/consultation';
 
-    /* --- Scroll: header shadow --- */
+ 
     var header = document.getElementById('site-header');
     window.addEventListener('scroll', function () {
       header.classList.toggle('scrolled', window.scrollY > 10);
     }, { passive: true });
 
-    /* --- Mobile menu --- */
     var menuBtn = document.getElementById('menu-btn');
     var drawer  = document.getElementById('mobile-drawer');
     var open    = false;
