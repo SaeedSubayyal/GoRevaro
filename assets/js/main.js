@@ -2,7 +2,7 @@
     'use strict';
 
     /* Config - update CALENDLY_URL before going live */
-    var CALENDLY_URL = 'https://calendly.com/your-username/consultation';
+    var CALENDLY_URL = process.env.CALENDLY_URL;
 
     /* --- Scroll: header shadow --- */
     var header = document.getElementById('site-header');
