@@ -127,7 +127,7 @@
   .header-cta {
     flex-shrink: 0;
     padding: 10px 24px;
-    background: var(--navy);
+    background: #705ad4;
     color: var(--white);
     border: none;
     border-radius: var(--r);
@@ -138,7 +138,7 @@
     display: inline-block;
     white-space: nowrap;
   }
-  .header-cta:hover { background: var(--navy-deep); transform: translateY(-1px); }
+  .header-cta:hover { background: #7562c7; transform: translateY(-1px); }
 
   .menu-btn {
     display: none;
@@ -409,7 +409,7 @@
 
   .card-icon {
     width: 46px; height: 46px;
-    background: var(--navy);
+    background: #705ad4;
     border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 18px;
@@ -462,7 +462,7 @@
   .btn-secondary {
     display: inline-block;
     padding: 12px 30px;
-    background: var(--navy); color: var(--white);
+    background: #705ad4; color: var(--white);
     border-radius: var(--r);
     font-size: 14px; font-weight: 600;
     transition: background .2s, transform .2s;
@@ -686,12 +686,12 @@
   /* ============================================================
      FOOTER
   ============================================================ */
-  .footer { background: var(--navy-deep); padding: 64px 48px 32px; }
+  .footer { background: white; padding: 64px 48px 32px; }
   .footer-inner { max-width: 1360px; margin: 0 auto; }
   .footer-grid  { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 48px; }
-  .footer-brand img { height: 30px; margin-bottom: 14px; filter: brightness(0) invert(1); opacity: .85; }
+  .footer-brand img { height: 100px; margin-bottom: 14px; filter: brightness(0) invert(1); opacity: .85; }
   .footer-desc  { font-size: 14px; color: #3e5470; line-height: 1.68; }
-  .footer-col h5 { font-size: 11px; font-weight: 700; color: var(--white); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .footer-col h5 { font-size: 11px; font-weight: 700; color: #0f3258; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
   .footer-links  { list-style: none; }
   .footer-links li { margin-bottom: 11px; }
   .footer-links a  { font-size: 14px; color: #3e5470; font-weight: 500; transition: color .2s; }
@@ -800,33 +800,29 @@
 }
 
 
-/* ===== FINAL BRANDING FIXES ===== */
-
-/* Larger logo */
 .logo-link img{
-  height:78px !important;
+  height:120px !important;
   width:auto;
   max-width:none;
   object-fit:contain;
 }
 
-/* Header alignment */
+
 .header-inner{
   max-width:1480px;
   padding:0 32px;
   height:92px;
 }
 
-/* Footer logo same size as navbar */
 .footer-brand img{
-  height:78px !important;
+  height: 100px ;
   width:auto;
   filter:none;
   opacity:1;
   margin-bottom:20px;
 }
 
-/* Remove hero box highlight */
+
 .hero-body h1 .hl{
   background:none !important;
   padding:0;
