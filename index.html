@@ -5,70 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Go Revaro - Global talent solutions without the global price tag.">
   <title>Go Revaro - Global Talent Solutions</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons — Tabler icon font (fixes missing icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-  <!-- =====HEADER========================= -->
+  <!-- ─── HEADER ─────────────────────────────────────────────────────── -->
   <header class="site-header scrolled" id="site-header">
     <div class="header-inner">
       <a href="#" class="logo-link" aria-label="Go Revaro home">
         <img src="assets/images/gorevaro-logo.png" alt="Go Revaro">
       </a>
+
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#why-us">Why Us</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#delivery-models">Delivery Models</a>
         <a href="#about">About</a>
       </nav>
+
       <a href="#" class="header-cta calendly-link">Book a Free Strategy Call</a>
+
+      <!-- Hamburger — toggled via main.js -->
       <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
+  <!-- Mobile nav drawer — toggled via main.js -->
   <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
     <a href="#why-us">Why Us</a>
     <a href="#how-it-works">How It Works</a>
     <a href="#delivery-models">Delivery Models</a>
     <a href="#about">About</a>
-    <a href="#" class="calendly-link" style="color:var(--navy);font-weight:700;margin-top:8px;">Book a Free Strategy Call &rarr;</a>
+    <a href="#" class="mobile-cta calendly-link">Book a Free Strategy Call &rarr;</a>
   </nav>
 
-  <!-- ============HERO (UPDATED)==================== -->
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────── -->
   <section class="hero">
     <div class="hero-left">
+
+      <!-- Eyebrow pill -->
       <div class="hero-pill">
         <div class="hero-pill-dot"></div>
         <span>GTM TALENT SOLUTIONS</span>
       </div>
+
       <h1 class="hero-h1">Build your entire<br><em>revenue team</em><br>at half the cost.</h1>
+
       <p class="hero-sub">GoRevaro places pre-vetted offshore revenue professionals across your full GTM motion, including BDRs, Account Executives, Account Managers, and Customer Success, at up to 50% less than domestic hiring costs.</p>
       <p class="hero-icp">Built for SaaS companies scaling their pipeline and recruitment firms growing their BD function.</p>
+
       <a href="#contact" class="cta-btn">Book a Free Strategy Call</a>
+
+      <!-- Stat cards — dot colours controlled by modifier classes -->
       <div class="hero-stat-cards">
         <div class="hsc">
-          <div class="hsc-icon" style="background:rgba(15,110,86,0.25)"><i class="ti ti-trending-down" style="color:#5DCAA5" aria-hidden="true"></i></div>
+          <div class="hsc-icon hsc-icon--green">
+            <i class="ti ti-trending-down" aria-hidden="true"></i>
+          </div>
           <div>
             <div class="hsc-num">50<span>%</span></div>
             <div class="hsc-label">Less than a domestic hire</div>
             <div class="hsc-sub">Place a full-time revenue professional at half the cost of a domestic equivalent, including salary, benefits, and overhead.</div>
           </div>
         </div>
+
         <div class="hsc">
-          <div class="hsc-icon" style="background:rgba(164,152,212,0.2)"><i class="ti ti-clock" style="color:#A498D4" aria-hidden="true"></i></div>
+          <div class="hsc-icon hsc-icon--lav">
+            <i class="ti ti-clock" aria-hidden="true"></i>
+          </div>
           <div>
             <div class="hsc-num">7<span>-10</span></div>
             <div class="hsc-label">Business days to shortlist</div>
             <div class="hsc-sub">We maintain a warm pipeline of pre-vetted candidates so you are never waiting on us to start from scratch.</div>
           </div>
         </div>
+
         <div class="hsc">
-          <div class="hsc-icon" style="background:rgba(28,61,110,0.6)"><i class="ti ti-trophy" style="color:#93B4D8" aria-hidden="true"></i></div>
+          <div class="hsc-icon hsc-icon--navy">
+            <i class="ti ti-trophy" aria-hidden="true"></i>
+          </div>
           <div>
             <div class="hsc-num">20<span>+ yrs</span></div>
             <div class="hsc-label">GTM leadership experience</div>
@@ -76,9 +104,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><!-- /.hero-left -->
+
+    <!-- Org-chart graphic -->
     <div class="hero-right">
       <div class="org-card">
+
         <div class="org-client">
           <i class="ti ti-building" aria-hidden="true"></i>
           <div>
@@ -86,7 +117,12 @@
             <div class="org-client-sub">You stay focused on growth</div>
           </div>
         </div>
-        <div class="org-connector"><div class="org-line"></div><div class="org-arrow"></div></div>
+
+        <div class="org-connector">
+          <div class="org-line"></div>
+          <div class="org-arrow"></div>
+        </div>
+
         <div class="org-mgr">
           <i class="ti ti-shield-check" aria-hidden="true"></i>
           <div>
@@ -94,27 +130,52 @@
             <div class="org-mgr-sub">Performance, coaching, reporting</div>
           </div>
         </div>
-        <div class="org-connector"><div class="org-line"></div><div class="org-arrow"></div></div>
-        <div class="org-roles">
-          <div class="org-role"><div class="org-role-dot" style="background:#5DCAA5"></div><div class="org-role-name">BDR / SDR</div><div class="org-role-sub">Pipeline</div></div>
-          <div class="org-role"><div class="org-role-dot" style="background:#5DCAA5"></div><div class="org-role-name">Account Executive</div><div class="org-role-sub">Closing</div></div>
-          <div class="org-role"><div class="org-role-dot" style="background:#FAC775"></div><div class="org-role-name">Account Manager</div><div class="org-role-sub">Expansion</div></div>
-          <div class="org-role"><div class="org-role-dot" style="background:#F0997B"></div><div class="org-role-name">CS / Support</div><div class="org-role-sub">Retention</div></div>
+
+        <div class="org-connector">
+          <div class="org-line"></div>
+          <div class="org-arrow"></div>
         </div>
+
+        <!-- Role dots use CSS classes instead of inline style -->
+        <div class="org-roles">
+          <div class="org-role">
+            <div class="org-role-dot dot--green"></div>
+            <div class="org-role-name">BDR / SDR</div>
+            <div class="org-role-sub">Pipeline</div>
+          </div>
+          <div class="org-role">
+            <div class="org-role-dot dot--green"></div>
+            <div class="org-role-name">Account Executive</div>
+            <div class="org-role-sub">Closing</div>
+          </div>
+          <div class="org-role">
+            <div class="org-role-dot dot--amber"></div>
+            <div class="org-role-name">Account Manager</div>
+            <div class="org-role-sub">Expansion</div>
+          </div>
+          <div class="org-role">
+            <div class="org-role-dot dot--red"></div>
+            <div class="org-role-name">CS / Support</div>
+            <div class="org-role-sub">Retention</div>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </div><!-- /.hero-right -->
   </section>
 
-  <!-- ===============WHY US============================= -->
+
+  <!-- ─── WHY US ────────────────────────────────────────────────────── -->
   <section id="why-us" class="section why-us">
     <div class="section-inner">
+
       <div class="section-head">
         <div class="eyebrow">Why Go Revaro</div>
         <h2 class="section-title">Smarter hiring. <span class="hl">Stronger results.</span></h2>
         <p class="section-sub">Go Revaro isn't just about saving money - we're about creating measurable ROI for your business.</p>
       </div>
 
-      <!-- Spotlight cards -->
+      <!-- Two spotlight (large) cards -->
       <div class="spotlight-grid">
         <article class="spotlight-card">
           <div class="card-icon">
@@ -123,6 +184,7 @@
           <h3 class="card-title">20+ years of GTM leadership</h3>
           <p class="card-body">Our founders have personally hired, managed, and scaled hundreds of BDRs, AEs, and account managers across B2B SaaS, recruitment, HVAC, and service-based businesses including marketing agencies. We assess candidates the way an operator would, not the way a recruiter would. That distinction is the entire product.</p>
         </article>
+
         <article class="spotlight-card">
           <div class="card-icon">
             <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -132,45 +194,62 @@
         </article>
       </div>
 
+      <!-- Four feature cards -->
       <div class="cards-grid">
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
           <h3 class="card-title">ROI that counts</h3>
           <p class="card-body">Lower overheads, faster ramp times, and higher output mean every hire pays for itself sooner.</p>
         </article>
+
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
           <h3 class="card-title">Hire in weeks, not months</h3>
           <p class="card-body">We maintain a warm pipeline of pre-vetted candidates so your shortlist lands in 7 to 10 business days.</p>
         </article>
+
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
           <h3 class="card-title">Ongoing training included</h3>
           <p class="card-body">Frameworks, playbooks, and coaching keep your reps sharp and improving beyond day one.</p>
         </article>
+
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          </div>
           <h3 class="card-title">Flexible models</h3>
           <p class="card-body">Start lean with a single placement or scale to a fully managed team. We grow with you.</p>
         </article>
       </div>
+
     </div>
   </section>
 
-  <!-- ==========HOW IT WORKS============== -->
 
+  <!-- ─── HOW IT WORKS ─────────────────────────────────────────────── -->
   <section id="how-it-works" class="how">
     <div class="how-head section-inner">
       <div class="eyebrow">Our Process</div>
       <h2 class="section-title">How It <span class="hl">Works</span></h2>
       <p class="section-sub">A streamlined, proven process that gets you from hire to high-performance in record time.</p>
     </div>
+
     <div class="how-layout">
+      <!-- Sticky left panel with globe graphic -->
       <div class="how-sticky">
         <div class="how-tag">Talent From Anywhere</div>
         <h2 class="how-title">Find and hire top talent locally or globally - quickly, compliantly, with expert support</h2>
         <p class="how-desc">Backed by real people who understand your goals, we blend expertise with insight to deliver the best talent every step of the way.</p>
         <a href="#" class="btn-secondary calendly-link">Get Started</a>
+
+        <!-- Decorative globe — aria-hidden, purely visual -->
         <div class="globe-wrap" aria-hidden="true">
           <div class="g-ring g-ring-1"></div>
           <div class="g-ring g-ring-2"></div>
@@ -183,44 +262,49 @@
           <div class="g-person g-p4"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
         </div>
       </div>
-      <div class="steps" role="list">
-        <article class="step" role="listitem">
+
+      <!-- Scrollable steps -->
+      <ol class="steps" role="list">
+        <li class="step" role="listitem">
           <div class="step-num">Step 1</div>
           <h3 class="step-title">Share your needs</h3>
           <p class="step-body">Tell us the roles you're hiring for and the outcomes you want. We'll understand your requirements, culture, and goals to find the perfect match.</p>
-        </article>
-        <article class="step" role="listitem">
+        </li>
+        <li class="step" role="listitem">
           <div class="step-num">Step 2</div>
           <h3 class="step-title">We source the best talent</h3>
           <p class="step-body">We search globally to find, vet, and shortlist the strongest candidates who match your specific needs and company culture.</p>
-        </article>
-        <article class="step" role="listitem">
+        </li>
+        <li class="step" role="listitem">
           <div class="step-num">Step 3</div>
           <h3 class="step-title">Seamless onboarding</h3>
           <p class="step-body">Your hires are trained, equipped with playbooks, and integrated into your workflow from day one.</p>
-        </article>
-        <article class="step" role="listitem">
+        </li>
+        <li class="step" role="listitem">
           <div class="step-num">Step 4</div>
           <h3 class="step-title">Management &amp; support</h3>
           <p class="step-body">Choose our managed model and get a dedicated manager (free for every 5 sellers) to oversee performance and drive results.</p>
-        </article>
-        <article class="step" role="listitem">
+        </li>
+        <li class="step" role="listitem">
           <div class="step-num">Step 5</div>
           <h3 class="step-title">Scale with confidence</h3>
           <p class="step-body">Add more roles or build full teams as your business grows, without the hiring headache. We scale with you.</p>
-        </article>
-      </div>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- =============VETTING PROCESS============================== -->
+
+  <!-- ─── VETTING PROCESS ───────────────────────────────────────────── -->
   <section id="vetting" class="section vetting">
     <div class="section-inner">
+
       <div class="section-head">
         <div class="eyebrow">Our Vetting Process</div>
         <h2 class="section-title">We do not send CVs. <span class="hl">We send proven talent.</span></h2>
         <p class="section-sub">Every GoRevaro candidate clears a 5-stage assessment built by people who have managed hundreds of revenue professionals. The bar is set by operators, not recruiters.</p>
       </div>
+
       <div class="vet-steps">
         <div class="vet-step">
           <div class="vet-num">1</div>
@@ -258,21 +342,28 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ===========DELIVERY MODELS======================== -->
+
+  <!-- ─── DELIVERY MODELS ───────────────────────────────────────────── -->
   <section id="delivery-models" class="section delivery">
     <div class="section-inner">
+
       <div class="section-head">
         <div class="eyebrow">Flexible Solutions</div>
         <h2 class="section-title">Our <span class="hl">Delivery Models</span></h2>
         <p class="section-sub">Choose the model that fits your needs - from direct placement to fully managed teams.</p>
       </div>
+
+      <!-- Tab nav — active state toggled via main.js -->
       <div class="tab-nav" role="tablist">
         <button class="tab-btn" data-tab="direct" role="tab" aria-selected="false">Direct Placement</button>
         <button class="tab-btn active" data-tab="managed" role="tab" aria-selected="true">Managed Teams</button>
       </div>
+
+      <!-- Direct Placement panel -->
       <div class="tab-panel" id="direct" role="tabpanel">
         <div class="tab-grid">
           <div class="tab-text">
@@ -288,6 +379,7 @@
               <a href="#" class="btn-outline calendly-link">Book a Free Strategy Call</a>
             </div>
           </div>
+
           <div class="tab-visual">
             <div class="vis-box">
               <div class="dp-wrap">
@@ -311,7 +403,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><!-- /#direct -->
+
+      <!-- Managed Teams panel -->
       <div class="tab-panel active" id="managed" role="tabpanel">
         <div class="tab-grid">
           <div class="tab-text">
@@ -327,6 +421,7 @@
               <a href="#" class="btn-outline calendly-link">Book a Free Strategy Call</a>
             </div>
           </div>
+
           <div class="tab-visual">
             <div class="vis-box">
               <div class="mt-wrap">
@@ -351,60 +446,65 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><!-- /#managed -->
+
     </div>
   </section>
 
-  <!-- ===========FAQ============= -->
+
+  <!-- ─── FAQ ───────────────────────────────────────────────────────── -->
   <section id="faq" class="section faq">
     <div class="section-inner">
+
       <div class="section-head">
         <div class="eyebrow">Common Questions</div>
         <h2 class="section-title">Questions we hear <span class="hl">on every call.</span></h2>
       </div>
+
+      <!-- FAQ accordion — toggled via main.js (no inline onclick) -->
       <div class="faq-list">
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q">
             <span>Can offshore reps actually sell to Western buyers?</span>
             <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-a">This is the most common concern we hear and it is a fair one. Not every offshore rep can do this, which is exactly why our vetting process is built around that specific bar. Every candidate goes through a role-specific assessment evaluated by people who have spent over 20 years managing GTM teams. We are looking for fluency, confidence, objection handling, and the ability to hold a professional conversation with a discerning buyer. The candidates who do not clear that bar do not make the shortlist.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q">
             <span>What happens if a rep underperforms after placement?</span>
             <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-a">On the Managed Teams model, our Team Manager monitors performance on an ongoing basis so underperformance is flagged early, not discovered at a quarterly review. If a rep is not meeting agreed standards within the first 90 days, we replace them at no charge. After 90 days our Team Manager works the performance issue directly through coaching. You will always know before a problem becomes critical.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q">
             <span>How quickly can you place a rep?</span>
             <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-a">We typically present a shortlist of qualified candidates within 7 to 10 business days of receiving a brief. We maintain a warm pipeline of pre-vetted candidates specifically so we are not starting from zero when a client brief arrives.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q">
             <span>Are you a competitor to recruitment agencies?</span>
             <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-a">Not at all. Recruitment agencies help businesses fill seats. GoRevaro helps businesses build and run their revenue engine. We work exclusively across GTM functions, and we go further than placement. Many recruitment firms actually use us to build out their own BD function because what we do is complementary, not competitive.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
+          <div class="faq-q">
             <span>Can we start with one rep before committing to a full team?</span>
             <svg class="faq-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-a">Yes, and most clients do exactly that. You can start with a single rep on either the Direct Placement or Managed Teams model. There is no minimum team size. See how it works, build confidence in the model, and scale when you are ready.</div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ========================================================
-       ABOUT
-  ======================================================== -->
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────────────── -->
   <section id="about" class="about">
     <div class="about-inner">
       <div class="eyebrow">About Go Revaro</div>
@@ -415,13 +515,14 @@
     </div>
   </section>
 
-  <!-- =============FOOTER================= -->
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="assets/images/gorevaro-logo.png" alt="Go Revaro">
-          <p class="footer-desc">Connecting businesses with world-class talent.<br> Affordable, efficient, and built to scale.</p>
+          <p class="footer-desc">Connecting businesses with world-class talent. Affordable, efficient, and built to scale.</p>
         </div>
         <div class="footer-col">
           <h5>Company</h5>
@@ -453,7 +554,9 @@
     </div>
   </footer>
 
-  <!-- =======SCRIPTS - IIFE, strict mode, no globals exposed============================== -->
+
+  <!-- Scripts — IIFE, strict mode, no globals exposed -->
   <script src="assets/js/main.js" defer></script>
+
 </body>
 </html>

@@ -88,12 +88,24 @@
       });
     });
 
-  }());
+    /* --- FAQ accordion ---
+         Closes any open item first, then opens the clicked one
+         (clicking an already-open item collapses it).          */
+    document.querySelectorAll('.faq-q').forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var answer = trigger.nextElementSibling;
+        var isOpen = answer.classList.contains('open');
 
-  function toggleFaq(el) {
-    var ans = el.nextElementSibling;
-    var isOpen = ans.classList.contains('open');
-    document.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
-    document.querySelectorAll('.faq-q').forEach(function(q) { q.classList.remove('open'); });
-    if (!isOpen) { ans.classList.add('open'); el.classList.add('open'); }
-  }
+        /* Collapse all items */
+        document.querySelectorAll('.faq-a').forEach(function (a) { a.classList.remove('open'); });
+        document.querySelectorAll('.faq-q').forEach(function (q) { q.classList.remove('open'); });
+
+        /* If it was closed, open it now */
+        if (!isOpen) {
+          answer.classList.add('open');
+          trigger.classList.add('open');
+        }
+      });
+    });
+
+  }());
