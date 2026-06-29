@@ -31,7 +31,7 @@
       a.addEventListener('click', function () { setMenu(false); });
     });
 
-    /* --- Smooth scroll (offset for sticky header) --- */
+
     document.querySelectorAll('a[href^="#"]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         var href = a.getAttribute('href');
@@ -45,7 +45,7 @@
       });
     });
 
-    /* --- Tabs --- */
+
     var tabBtns   = document.querySelectorAll('.tab-btn');
     var tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -89,3 +89,11 @@
     });
 
   }());
+
+  function toggleFaq(el) {
+    var ans = el.nextElementSibling;
+    var isOpen = ans.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
+    document.querySelectorAll('.faq-q').forEach(function(q) { q.classList.remove('open'); });
+    if (!isOpen) { ans.classList.add('open'); el.classList.add('open'); }
+  }
