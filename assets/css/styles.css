@@ -371,7 +371,7 @@ button { cursor: pointer; font-family: var(--sans); }
 .hero-h1 {
   font-family: var(--serif);  
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--white);
   line-height: 1.18;
   margin-bottom: 20px;
