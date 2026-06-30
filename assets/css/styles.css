@@ -629,13 +629,13 @@ button { cursor: pointer; font-family: var(--sans); }
 .vet-num {
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: var(--purple-btn);
+  background: var(--lav);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 15px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy-deep);
   margin-bottom: 14px;
   position: relative;
   z-index: 1;
@@ -689,13 +689,13 @@ button { cursor: pointer; font-family: var(--sans); }
 .hiw-num {
   width: 44px; height: 44px;
   border-radius: 50%;
-  background: var(--purple-btn);
+  background: var(--lav);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 15px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy-deep);
   margin-bottom: 14px;
   position: relative;
   z-index: 1;
@@ -810,8 +810,8 @@ button { cursor: pointer; font-family: var(--sans); }
   gap: 10px;
 }
 .dm-mgr {
-  background: var(--purple-btn);
-  color: white;
+  background: var(--lav);
+  color: var(--navy-deep);
   border-radius: var(--r);
   padding: 12px 20px;
   font-size: 13px;
