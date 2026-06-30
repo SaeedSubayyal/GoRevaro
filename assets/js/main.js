@@ -3,6 +3,15 @@
 
     var CALENDLY_URL = 'https://calendly.com/your-account/consultation';
 
+    /* --- Delivery Models tab toggle (called via inline onclick) --- */
+    window.switchTab = function (el, targetId) {
+      document.querySelectorAll('.dm-tab').forEach(function (t) { t.classList.remove('active'); });
+      el.classList.add('active');
+      document.querySelectorAll('.dm-body').forEach(function (b) { b.style.display = 'none'; });
+      var target = document.getElementById(targetId);
+      if (target) target.style.display = 'grid';
+    };
+
  
     var header = document.getElementById('site-header');
     window.addEventListener('scroll', function () {
