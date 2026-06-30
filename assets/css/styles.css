@@ -371,7 +371,7 @@ button { cursor: pointer; font-family: var(--sans); }
 .hero-h1 {
   font-family: var(--serif);  
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--white);
   line-height: 1.18;
   margin-bottom: 20px;
@@ -810,8 +810,8 @@ button { cursor: pointer; font-family: var(--sans); }
   gap: 10px;
 }
 .dm-mgr {
-  background: var(--lav);
-  color: var(--navy-deep);
+  background: var(--purple-btn);
+  color: white;
   border-radius: var(--r);
   padding: 12px 20px;
   font-size: 13px;
