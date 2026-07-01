@@ -70,7 +70,7 @@ button { cursor: pointer; font-family: var(--sans); }
 .hl {
   position: relative;
   display: inline-block;
-  font-style: italic;
+  font-style: normal;
   z-index: 1;
 }
 .hl::after {
