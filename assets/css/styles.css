@@ -154,7 +154,7 @@ button { cursor: pointer; font-family: var(--sans); }
   flex-shrink: 0;
   padding: 10px 24px;
   background: var(--lav);
-  color: var(--white);
+  color: var(--navy-deep);
   border: none;
   border-radius: var(--r);
   font-size: 14px;
@@ -218,7 +218,7 @@ button { cursor: pointer; font-family: var(--sans); }
 .cta-btn {
   display: inline-block;
   background: var(--lav);
-  color: var(--white);
+  color: var(--navy-deep);
   font-size: 14px;
   font-weight: 500;
   padding: 13px 26px;
@@ -586,7 +586,7 @@ button { cursor: pointer; font-family: var(--sans); }
 }
 .card-icon svg {
   width: 22px; height: 22px;
-  stroke: var(--white);
+  stroke: var(--navy-deep);
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
