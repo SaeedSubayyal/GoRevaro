@@ -122,4 +122,89 @@
       });
     });
 
+    /* --- RevaroAI chatbot --- */
+    var chatbotToggle = document.getElementById('chatbot-toggle');
+    var chatbotPanel = document.getElementById('chatbot-panel');
+    var chatbotClose = document.getElementById('chatbot-close');
+    var chatbotForm = document.getElementById('chatbot-form');
+    var chatbotInput = document.getElementById('chatbot-input');
+    var chatbotMessages = document.getElementById('chatbot-messages');
+    var chatbotSuggestions = document.querySelectorAll('.chatbot-suggestion');
+    var conversation = [];
+
+    function renderMessage(text, role) {
+      var bubble = document.createElement('div');
+      bubble.className = 'chatbot-msg ' + (role === 'user' ? 'chatbot-msg--user' : 'chatbot-msg--bot');
+      bubble.innerHTML = role === 'user'
+        ? '<strong>You:</strong> ' + text
+        : '<strong>RevaroAI:</strong> ' + text;
+      chatbotMessages.appendChild(bubble);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function setBusy(isBusy) {
+      chatbotInput.disabled = isBusy;
+      chatbotToggle.disabled = isBusy;
+      chatbotToggle.setAttribute('aria-busy', String(isBusy));
+    }
+
+    function openChat() {
+      chatbotPanel.hidden = false;
+      chatbotToggle.setAttribute('aria-expanded', 'true');
+      setTimeout(function () { chatbotInput.focus(); }, 80);
+    }
+
+    function closeChat() {
+      chatbotPanel.hidden = true;
+      chatbotToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    chatbotToggle.addEventListener('click', function () {
+      if (chatbotPanel.hidden) {
+        openChat();
+      } else {
+        closeChat();
+      }
+    });
+
+    chatbotClose.addEventListener('click', closeChat);
+
+    chatbotSuggestions.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        openChat();
+        chatbotInput.value = btn.getAttribute('data-suggestion');
+        chatbotForm.requestSubmit();
+      });
+    });
+
+    chatbotForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var message = chatbotInput.value.trim();
+      if (!message) return;
+
+      renderMessage(message, 'user');
+      conversation.push({ role: 'user', content: message });
+      chatbotInput.value = '';
+      setBusy(true);
+
+      fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: conversation })
+      }).then(function (response) {
+        if (!response.ok) {
+          throw new Error('Request failed');
+        }
+        return response.json();
+      }).then(function (data) {
+        var reply = data.reply || 'I am here to help with GoRevaro-related questions. Please try again.';
+        conversation.push({ role: 'assistant', content: reply });
+        renderMessage(reply, 'assistant');
+      }).catch(function () {
+        renderMessage('I am having trouble reaching the assistant right now. Please try again shortly.', 'assistant');
+      }).finally(function () {
+        setBusy(false);
+      });
+    });
+
   }());
