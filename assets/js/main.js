@@ -130,7 +130,20 @@
     var chatbotInput = document.getElementById('chatbot-input');
     var chatbotMessages = document.getElementById('chatbot-messages');
     var chatbotSuggestions = document.querySelectorAll('.chatbot-suggestion');
+    var chatbotWelcome = document.getElementById('chatbot-welcome');
+    var chatbotSuggestionsWrap = document.getElementById('chatbot-suggestions');
     var conversation = [];
+
+    function hideIntro() {
+      if (chatbotWelcome) {
+        chatbotWelcome.remove();
+        chatbotWelcome = null;
+      }
+      if (chatbotSuggestionsWrap) {
+        chatbotSuggestionsWrap.remove();
+        chatbotSuggestionsWrap = null;
+      }
+    }
 
     function renderMessage(text, role) {
       var bubble = document.createElement('div');
@@ -151,12 +164,14 @@
     function openChat() {
       chatbotPanel.hidden = false;
       chatbotToggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('chat-open');
       setTimeout(function () { chatbotInput.focus(); }, 80);
     }
 
     function closeChat() {
       chatbotPanel.hidden = true;
       chatbotToggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('chat-open');
     }
 
     chatbotToggle.addEventListener('click', function () {
@@ -182,6 +197,7 @@
       var message = chatbotInput.value.trim();
       if (!message) return;
 
+      hideIntro();
       renderMessage(message, 'user');
       conversation.push({ role: 'user', content: message });
       chatbotInput.value = '';
