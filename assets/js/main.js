@@ -97,6 +97,11 @@
       });
     });
 
+    var yearEl = document.getElementById('current-year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
     /* --- FAQ accordion ---
          Closes any open item first, then opens the clicked one
          (clicking an already-open item collapses it).          */
